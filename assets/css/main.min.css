@@ -1,1 +1,26 @@
-@font-face{font-family:Open Sans;font-style:normal;font-weight:400;src:url(../../assets/fonts/open-sans-Light.woff2)}@font-face{font-family:Inter;font-style:normal;font-weight:400;src:url(../../assets/fonts/Inter-VariableFont_slnt,wght.ttf)}html{background:#0d3232;font-family:Inter,sans-serif;font-weight:400}footer{bottom:0;color:#fff;position:fixed}
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/main.scss ***!
+  \*************************************************************************************************************/
+@font-face {
+  font-family: "Open Sans";
+  src: url(../.././assets/fonts/open-sans-Light.woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../.././assets/fonts/Inter-VariableFont_slnt,wght.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background: rgb(13, 50, 50);
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  color: white;
+}
