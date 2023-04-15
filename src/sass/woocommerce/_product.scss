@@ -1,0 +1,14 @@
+ul.msr-prod-list{
+        margin: 0;
+        padding: 0;
+    li{
+        background: #0e3743;
+        padding: 0.5em;
+        border-radius: 6px;
+
+    & .wc-block-grid__product-image{
+        border-radius: 7em;
+    }
+
+    }
+}

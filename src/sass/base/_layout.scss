@@ -1,0 +1,86 @@
+:root {
+	--wpadmin-bar--height: 46px;
+}
+
+.wp-site-blocks {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.site-footer-container {
+	margin-top: auto;
+}
+
+body.admin-bar {
+	--wpadmin-bar--height: 32px;
+
+
+	.wp-site-blocks {
+		min-height: calc(100vh - var(--wpadmin-bar--height));
+	}
+}
+
+body {
+
+	background: rgb(66,199,255);
+	background: linear-gradient(150deg, rgb(66, 199, 254) 0%, rgb(56, 159, 202) 4%, rgb(43, 107, 134) 8%, rgb(30, 51, 60) 23%, rgb(23, 23, 23) 100%);
+}
+
+
+/*
+super simple flex grid
+https://codepen.io/flpwgr/pen/qbMJaY
+*/
+.container {
+	margin: 0 auto;
+	max-width:1140px;
+	min-width: 320px;	
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+
+	& .column {
+		text-align: center;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 1;
+
+		&.col-1 {max-width: calc(100% / 12);}
+		&.col-2 {max-width: calc(100% / 12 * 2);}
+		&.col-3 {max-width: calc(100% / 12 * 3);}
+		&.col-4 {max-width: calc(100% / 12 * 4);}
+		&.col-5 {max-width: calc(100% / 12 * 5);}
+		&.col-6 {max-width: calc(100% / 2);}
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.container {
+		overflow: auto;
+	}
+
+	.column {
+		min-width: 100%;
+		width: 100%;
+		margin: 10px 0;
+	}
+}
+
+.alignwide,
+.alignfull {
+	margin: 32px calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
+}
+
+@media (max-width: 920px) {
+	.alignwide {
+		margin: 32px calc( ( 767px - 920px ) / 2 );
+		max-width: 920px;
+		width: 920px;
+	}
+}

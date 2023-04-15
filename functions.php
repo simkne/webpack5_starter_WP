@@ -45,7 +45,7 @@ if (!function_exists('sik_theme_support')) :
 		add_theme_support('wp-block-styles');
 
 		// Enqueue editor styles.
-		add_editor_style('style.css');
+		add_editor_style(get_template_directory_uri() . '/assets/css/main.min.css');
 
 		//default features
 		//		add_theme_support('automatic-feed-links');
@@ -58,13 +58,13 @@ if (!function_exists('sik_theme_support')) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 192,
-				'width'       => 192,
+				'height'      => 100,
+				'width'       => 220,
 				'flex-width'  => true,
 				'flex-height' => true,
 			)
 		);
-		
+
 		add_theme_support(
 			'html5',
 			[

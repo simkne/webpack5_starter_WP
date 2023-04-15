@@ -1,8 +1,12 @@
 // fonts
-@import './base/fonts';
+//@import './base/fonts';
+@import './base/style'; // imports all other in base/
 
 // layout and structure
+//@import './post/meta';
 @import './layout';
 
 // main content pane styles
 //@import './components/content';
+@import './components/navigation';
+@import './woocommerce/product';

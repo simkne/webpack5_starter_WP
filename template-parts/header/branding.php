@@ -4,7 +4,7 @@
  *
  */
 ?>
-<div class="site-branding">
+<div class="site-branding column col-3">
     <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
       <?php
       $custom_logo_id = get_theme_mod('custom_logo');

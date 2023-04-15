@@ -1,0 +1,16 @@
+.site-header {
+	padding: 1em 0;
+
+	.site-branding {
+		display: contents;
+	}
+
+}
+
+// Needed until Gutenberg offers responsive design options
+// Used by 'header-linear' template part
+.wp-site-blocks .site-header-linear {
+	.site-words-stack-small {
+		display: block;
+	}
+}
