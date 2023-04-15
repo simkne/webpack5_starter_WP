@@ -5,7 +5,8 @@ if (!function_exists('sik_styles')) :
 	/**
 	 * Enqueue styles.
 	 */
-	function sik_styles(){
+	function sik_styles()
+	{
 		// Register theme stylesheet.
 		$theme_version = wp_get_theme()->get('Version');
 
@@ -30,27 +31,40 @@ add_action('wp_enqueue_scripts', 'sik_styles');
 
 
 
-if ( ! function_exists( 'sik_theme_support' ) ) :
+if (!function_exists('sik_theme_support')) :
 
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
 	 */
-	function twentytwentytwo_support() {
+	function sik_theme_support()
+	{
 
 		// Add support for block styles.
-		add_theme_support( 'wp-block-styles' );
-
-		// Enqueue editor styles.
-		add_editor_style( 'style.css' );
-
-		//default features
-		//add_theme_support('automatic-feed-links');
-		add_theme_support('title-tag');
-		add_theme_support('post-thumbnails');
 		add_theme_support('align-wide');
 		add_theme_support('wp-block-styles');
-		add_theme_support('menus');	
+
+		// Enqueue editor styles.
+		add_editor_style('style.css');
+
+		//default features
+		//		add_theme_support('automatic-feed-links');
+		add_theme_support('title-tag');
+		add_theme_support('post-thumbnails');
+
+		add_theme_support('menus');
+
+		// Add support for core custom logo.
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 192,
+				'width'       => 192,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
+		
 		add_theme_support(
 			'html5',
 			[
@@ -61,92 +75,45 @@ if ( ! function_exists( 'sik_theme_support' ) ) :
 				'style',
 			]
 		);
-
 	}
 
 endif;
 
-add_action( 'after_setup_theme', 'sik_theme_support' );
+add_action('after_setup_theme', 'sik_theme_support');
 
 
+/*
+* register menus
+*/
 
-
-
-function sik_theme_setup(){
-
-	/**
-	 * Register menu locations
-	 */
-
-	register_nav_menus(THEME_SETTINGS['menu_locations']);
-
-	/**
-	 * Load textdomain.
-	 */
-	load_theme_textdomain(THEME_SETTINGS['textdomain'], get_template_directory() . '/languages');
-
-	/**
-	 * Define content width in articles
-	 */
-	if (!isset($content_width)) {
-		$content_width = THEME_SETTINGS['content_width'];
-	}
-
-	// Run the rest of the setup
-	//build_taxonomies();
-	//build_post_types();
-}
-
-/**
- * Build theme support
- */
-function build_theme_support()
+function register_menus()
 {
-	add_theme_support('automatic-feed-links');
-	add_theme_support('title-tag');
-	add_theme_support('post-thumbnails');
-	add_theme_support('align-wide');
-	add_theme_support('wp-block-styles');
-	add_theme_support('menus');	
-	add_theme_support(
-		'html5',
-		[
-			'search-form',
-			'gallery',
-			'caption',
-			'script',
-			'style',
-		]
+	register_nav_menus(
+		array(
+			'main-menu' => 'Main Menu',
+			'footer-menu' => 'Footer Menu',
+		)
 	);
 }
-
-function register_menus() { 
-    register_nav_menus(
-        array(
-            'main-menu' => 'Main Menu',
-            'footer-menu' => 'Footer Menu',
-        )
-    ); 
-}
-add_action( 'init', 'register_menus' );
+add_action('init', 'register_menus');
 
 // Add block patterns
 //require get_template_directory() . '/inc/block-patterns.php';
 
 
 
-  /*
+/*
   * For developers: WordPress debugging mode.
   *
   * Change this to true to enable the display of notices during development.
   * It is strongly recommended that plugin and theme developers use WP_DEBUG
   * in their development environments.
   */
- 
-/*  define('WP_DEBUG', true); 
- define('WP_DEBUG_LOG', true); 
- define('WP_DEBUG_DISPLAY', false);  
- @ini_set('display_errors',0);
- define('DISALLOW_FILE_EDIT', true); 
- define('FS_METHOD','direct'); */
+
+define('DISALLOW_FILE_EDIT', true);
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', false);
+@ini_set('display_errors', 0);
+/*   define('FS_METHOD','direct'); */
  //define( 'SAVEQUERIES', true);
