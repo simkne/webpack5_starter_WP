@@ -1,0 +1,16 @@
+$font-path: "../../assets/fonts/" !default;
+
+// regular
+@font-face {
+  font-family: 'Open Sans';
+  src: url('#{$font-path}/open-sans/open-sans-Light.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+// regular
+@font-face {
+  font-family: 'Inter';
+  src: url('#{$font-path}/Inter/Inter-VariableFont_slnt,wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
