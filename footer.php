@@ -1,5 +1,5 @@
 <footer id="footer">
-  <h5>© <?php echo date("Y"); ?> My Blog</h5>
+  <h6>changing the way you listen.. © <?php echo date("Y"); ?></6>
 </footer>
 
 <!-- wordpress footer includes -->

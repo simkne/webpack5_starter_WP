@@ -1,0 +1,11 @@
+footer{
+    position: fixed;
+    bottom: 0px;
+    background: #17171780;
+    padding: 0 1em;
+    
+
+    & h6{
+        margin: 1em;
+    }
+}

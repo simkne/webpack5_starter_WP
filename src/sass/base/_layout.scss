@@ -23,9 +23,50 @@ body.admin-bar {
 
 body {
 
-	background: rgb(66,199,255);
-	background: linear-gradient(150deg, rgb(66, 199, 254) 0%, rgb(56, 159, 202) 4%, rgb(43, 107, 134) 8%, rgb(30, 51, 60) 23%, rgb(23, 23, 23) 100%);
+	background: #171717;
+	//background: linear-gradient(150deg, rgb(66, 199, 254) 0%, rgb(56, 159, 202) 4%, rgb(43, 107, 134) 8%, rgb(30, 51, 60) 23%, rgb(23, 23, 23) 100%);
+	background: radial-gradient(ellipse at 4% 3%, rgb(66, 199, 254) 0%, rgb(56, 159, 202) 6%, rgb(43, 107, 134) 10%, rgb(30, 51, 60) 20%, rgb(23, 23, 23) 100%);
+
 }
+
+main.main-wrapper{
+
+	
+	background: linear-gradient(129deg, #58b6de, #171717, #482f96);
+    background-size: 300% 600%;
+
+    -webkit-animation: msr_bg 50s ease infinite;
+    -moz-animation: msr_bg 50s ease infinite;
+    animation: msr_bg 50s ease infinite;
+}
+
+
+.css-selector {
+    background: linear-gradient(129deg, #58b6de, #171717, #482f96);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+
+@-webkit-keyframes msr_bg {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+@-moz-keyframes msr_bg {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+@keyframes msr_bg {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+
 
 
 /*
